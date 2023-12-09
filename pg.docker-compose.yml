@@ -1,0 +1,28 @@
+version: '3'
+services:
+  postgres:
+    container_name: pg-vacancies
+    env_file:
+      - 'gateway/.env'
+    build:
+      context: .
+      dockerfile: ./pg.Dockerfile
+    volumes:
+      - pg:/var/lib/postgresql/data
+    restart: always
+    ports:
+      - '5435:5432'
+    networks:
+      - pg
+
+networks:
+  pg:
+    driver: bridge
+
+volumes:
+  pg:
+    driver: local
+    driver_opts:
+       o: bind
+       type: none
+       device: /home/data/vacancies/

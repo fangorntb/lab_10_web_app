@@ -1,0 +1,2 @@
+FROM library/postgres
+EXPOSE $POSTGRES_PORT_EXPOSED
