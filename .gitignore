@@ -7,3 +7,4 @@
 *.exp.*
 *.lock
 *.idea*
+*.sqlite3
