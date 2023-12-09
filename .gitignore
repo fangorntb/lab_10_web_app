@@ -1,0 +1,8 @@
+*.zip
+*.whl
+*.egg
+*.tar.gz
+
+*.json
+*.exp.*
+*.lock
